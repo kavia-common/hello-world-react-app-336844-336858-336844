@@ -1,0 +1,120 @@
+/* DevicesSection styles */
+
+.section {
+  width: 100%;
+  padding: 0 80px;
+}
+
+.inner {
+  background: #0F0F0F;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+/* Text block */
+.textBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-white);
+  line-height: 1.5em;
+}
+
+.paragraph {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+  line-height: 1.6em;
+}
+
+.btn {
+  align-self: flex-start;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-white);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Devices grid */
+.devicesGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.deviceCard {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.deviceCard:hover {
+  border-color: #404040;
+}
+
+.deviceIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deviceName {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-white);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .section {
+    padding: 0 40px;
+  }
+
+  .inner {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 20px;
+  }
+
+  .devicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

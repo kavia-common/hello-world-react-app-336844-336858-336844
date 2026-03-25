@@ -1,0 +1,66 @@
+/* GenreFilterBar styles */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.scrollArrow {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: #1F1F1F;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scrollArrow:hover {
+  background: #262626;
+}
+
+.bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  padding: 2px 0;
+}
+
+.bar::-webkit-scrollbar {
+  display: none;
+}
+
+.genreBtn {
+  padding: 10px 20px;
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  color: #BFBFBF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.genreBtn:hover {
+  background: #262626;
+  color: white;
+}
+
+.genreBtn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}

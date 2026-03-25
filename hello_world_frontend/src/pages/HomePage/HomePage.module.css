@@ -1,0 +1,42 @@
+/* HomePage styles */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #141414;
+  min-height: 100vh;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 80px;
+}
+
+.faqSection {
+  padding: 60px 80px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contentSection {
+    padding: 40px;
+  }
+
+  .faqSection {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentSection {
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .faqSection {
+    padding: 30px 20px;
+  }
+}

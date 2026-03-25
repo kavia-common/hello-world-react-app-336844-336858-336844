@@ -1,0 +1,146 @@
+/* Navbar styles matching Figma design */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  width: 100%;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #262626;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Navigation Links Container - centered */
+.navLinksContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #0F0F0F;
+  border: 3px solid #1F1F1F;
+  border-radius: 10px;
+  padding: 8px 30px 8px 8px;
+}
+
+.navLink {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #BFBFBF;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navLinkActive {
+  background: #1A1A1A;
+  border: 1px solid #1A1A1A;
+  color: #FFFFFF !important;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.iconBtn:hover {
+  background: #262626;
+  border-color: #404040;
+}
+
+.avatarBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 40px;
+  }
+
+  .navLinks {
+    gap: 8px;
+    padding: 8px 16px 8px 8px;
+  }
+
+  .navLink {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .navLinksContainer {
+    display: none;
+  }
+
+  .actionButtons {
+    gap: 6px;
+  }
+}

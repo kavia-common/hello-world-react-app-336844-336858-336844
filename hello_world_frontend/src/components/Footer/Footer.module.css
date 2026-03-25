@@ -1,0 +1,152 @@
+/* Footer styles matching Figma design */
+
+.footer {
+  background: #0F0F0F;
+  padding: 80px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: auto;
+}
+
+.mainContent {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columnHeading {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-white);
+  line-height: 1.5em;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-grey60);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5em;
+}
+
+.footerLink:hover {
+  color: var(--color-text-white);
+}
+
+/* Social buttons */
+.socialButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 44px;
+  height: 44px;
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  background: #262626;
+  border-color: #404040;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid #262626;
+  margin: 0;
+}
+
+/* Bottom bar */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+  line-height: 1.5em;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.legalLink {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: var(--color-text-white);
+}
+
+.legalSep {
+  color: #262626;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .mainContent {
+    gap: 30px;
+  }
+
+  .column {
+    min-width: calc(50% - 15px);
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

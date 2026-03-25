@@ -1,0 +1,305 @@
+/* ShowsPage styles */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  background: #141414;
+  min-height: 100vh;
+  padding-top: 90px;
+}
+
+.heroBannerWrapper {
+  padding: 0 80px;
+  margin-bottom: 40px;
+}
+
+/* Main content layout */
+.mainContent {
+  display: flex;
+  gap: 20px;
+  padding: 0 80px 60px;
+}
+
+.leftCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightCol {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: #0F0F0F;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 4px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 10px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  color: #BFBFBF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.tabActive {
+  background: #1A1A1A;
+  color: white !important;
+}
+
+/* Season selector */
+.seasonSelector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.seasonBtn {
+  padding: 8px 18px;
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 500;
+  color: #BFBFBF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seasonBtn:hover {
+  background: #262626;
+  color: white;
+}
+
+.seasonActive {
+  background: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: white !important;
+}
+
+/* Episodes section */
+.episodesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.episodeList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emptyMsg {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--color-text-grey60);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cast grid */
+.castGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.castCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.castImg {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #1F1F1F;
+}
+
+.castInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.castName {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-white);
+}
+
+.castRole {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+}
+
+/* Right column meta card */
+.metaCard {
+  background: #0F0F0F;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metaHeading {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-white);
+  margin-bottom: 4px;
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #262626;
+}
+
+.metaItem:last-of-type {
+  border-bottom: none;
+}
+
+.metaLabel {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+}
+
+.metaValue {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-white);
+  text-align: right;
+}
+
+.metaValueHighlight {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.watchNowBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.watchNowBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #262626;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.addBtn:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: #404040;
+}
+
+.reviewsPlaceholder {
+  padding: 40px 0;
+}
+
+/* More Like This */
+.moreLikeSection {
+  padding: 0 80px 60px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroBannerWrapper,
+  .mainContent,
+  .moreLikeSection {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .rightCol {
+    width: 100%;
+  }
+
+  .metaCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBannerWrapper,
+  .mainContent,
+  .moreLikeSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .castGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

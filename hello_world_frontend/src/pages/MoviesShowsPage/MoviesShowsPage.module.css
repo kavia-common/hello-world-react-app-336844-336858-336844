@@ -1,0 +1,49 @@
+/* MoviesShowsPage styles */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  background: #141414;
+  min-height: 100vh;
+  padding-top: 90px; /* offset for fixed navbar */
+}
+
+.heroBannerWrapper {
+  padding: 0 80px;
+  margin-bottom: 40px;
+}
+
+.filterSection {
+  padding: 0 80px;
+  margin-bottom: 40px;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 80px 60px;
+}
+
+.spacer {
+  height: 60px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroBannerWrapper,
+  .filterSection,
+  .contentSection {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBannerWrapper,
+  .filterSection,
+  .contentSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

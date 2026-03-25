@@ -1,0 +1,139 @@
+/* HeroSection styles */
+
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 699px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background grid of movie posters */
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gridRow {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.bgPoster {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.6;
+}
+
+/* Fade overlays */
+.fadeTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
+  pointer-events: none;
+}
+
+.fadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
+  pointer-events: none;
+}
+
+/* CTA Container */
+.ctaContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 100px 150px 60px;
+  text-align: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 760px;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-text-white);
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.paragraph {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-grey60);
+  line-height: 1.5em;
+  text-align: center;
+}
+
+/* CTA Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 24px;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-white);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: var(--color-accent-hover);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ctaContainer {
+    padding: 80px 60px 40px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaContainer {
+    padding: 80px 20px 40px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
